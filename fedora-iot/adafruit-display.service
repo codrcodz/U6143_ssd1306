@@ -1,0 +1,10 @@
+[Unit]
+Description=Displays system stats on Adafruit display attached to RPi
+
+[Service]
+Type=forking
+ExecStart=/bin/sh -c '/usr/local/bin/adafruit-display &'
+
+[Install]
+WantedBy=multi-user.target
+
